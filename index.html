@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Piedra, Papel o Tijeras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title-emoji">🪨 📄 ✂️</h1>
+            <h2 class="title">Piedra, Papel o Tijeras</h2>
+            <p class="subtitle">¡Desafía a la computadora en este clásico juego!</p>
+        </div>
+
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <div class="score-section">
+                <div class="player-info">
+                    <span class="player-icon">👤</span>
+                    <span class="player-name">Tú</span>
+                </div>
+                <div class="score" id="playerScore">0</div>
+            </div>
+            
+            <div class="result-section">
+                <div class="trophy">🏆</div>
+                <div class="result-message" id="resultMessage">Elige tu jugada</div>
+            </div>
+            
+            <div class="score-section">
+                <div class="player-info">
+                    <span class="player-icon">🤖</span>
+                    <span class="player-name">Computadora</span>
+                </div>
+                <div class="score" id="computerScore">0</div>
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <div class="game-area">
+            <div class="choice-display">
+                <div class="choice-section">
+                    <h3 class="choice-title">Tu Elección</h3>
+                    <div class="choice-circle" id="playerChoice">
+                        <span class="choice-emoji">?</span>
+                    </div>
+                </div>
+
+                <div class="vs-section">
+                    <div class="vs-text">VS</div>
+                    <div class="loading-spinner" id="loadingSpinner" style="display: none;"></div>
+                </div>
+
+                <div class="choice-section">
+                    <h3 class="choice-title">Computadora</h3>
+                    <div class="choice-circle" id="computerChoice">
+                        <span class="choice-emoji" id="computerEmoji">?</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Choice Buttons -->
+        <div class="choice-buttons">
+            <button class="choice-btn" data-choice="rock">
+                <div class="btn-emoji">🪨</div>
+                <div class="btn-text">Piedra</div>
+            </button>
+            <button class="choice-btn" data-choice="paper">
+                <div class="btn-emoji">📄</div>
+                <div class="btn-text">Papel</div>
+            </button>
+            <button class="choice-btn" data-choice="scissors">
+                <div class="btn-emoji">✂️</div>
+                <div class="btn-text">Tijeras</div>
+            </button>
+        </div>
+
+        <!-- Reset Button -->
+        <div class="reset-section">
+            <button class="reset-btn" id="resetBtn">
+                <span class="reset-icon">🔄</span>
+                <span class="reset-text">Reiniciar Juego</span>
+            </button>
+        </div>
+
+        <!-- Game History -->
+        <div class="history-section" id="historySection" style="display: none;">
+            <h3 class="history-title">Historial de Partidas</h3>
+            <div class="history-list" id="historyList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
